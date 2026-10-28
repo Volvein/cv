@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lokendra Sharma — .NET Full-Stack Developer</title>
+<meta name="description" content="Portfolio of Lokendra Sharma, .NET full-stack developer from Jaipur. My journey, what I learned, and the professional and personal projects I built.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#15112F; --surface:#1F1A45; --line:#352E6B; --text:#EEEBFF; --mute:#A9A3CC;
+  --work:#8F7BFF; --learn:#FFB547; --personal:#3DD6B5;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"Instrument Sans",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font:400 1.0625rem/1.65 var(--body);color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--learn);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+section{padding:5.5rem 0}
+h1,h2,h3{font-family:var(--display);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4vw,2.75rem);font-weight:800;margin-bottom:.75rem}
+.lead{color:var(--mute);max-width:56ch;margin-bottom:2.5rem}
+.btn{display:inline-block;font:600 1rem var(--body);text-decoration:none;padding:.8rem 1.4rem;border-radius:999px;border:2px solid var(--text);cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-fill{background:var(--learn);border-color:var(--learn);color:#15112F}
+.btn-line{background:transparent;color:var(--text)}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(21,17,47,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:800 1.25rem var(--display);text-decoration:none}
+.logo span{color:var(--work)}
+.links{display:flex;gap:1.75rem;list-style:none}
+.links a{text-decoration:none;font-weight:500;color:var(--mute)}
+.links a:hover{color:var(--text)}
+.menu{display:none;background:none;color:var(--text);border:2px solid var(--line);border-radius:8px;padding:.35rem .7rem;font:600 .95rem var(--body);cursor:pointer}
+
+/* hero */
+.hero{padding:4rem 0 5rem;min-height:calc(100vh - 64px);display:flex;align-items:center}
+.term{background:#0E0B24;border:1px solid var(--line);border-radius:14px;padding:1.25rem 1.4rem;font:400 .92rem/1.8 var(--mono);color:#cfc9f5;max-width:560px;margin-bottom:2.5rem}
+.term .bar{display:flex;gap:.4rem;margin-bottom:.9rem}
+.term .bar i{width:.65rem;height:.65rem;border-radius:50%;background:var(--line)}
+.term div.l{opacity:0;transform:translateY(4px);animation:line .4s forwards}
+.term .ok{color:var(--personal)}
+.term .cur{display:inline-block;width:.55em;height:1.1em;background:var(--learn);vertical-align:-.2em;animation:blink 1s steps(1) infinite}
+.l1{animation-delay:.3s!important}.l2{animation-delay:1.1s!important}.l3{animation-delay:1.9s!important}.l4{animation-delay:2.6s!important}
+@keyframes line{to{opacity:1;transform:none}}
+@keyframes blink{50%{opacity:0}}
+.reveal{opacity:0;transform:translateY(16px);animation:line .8s 3.1s forwards}
+.reveal.b{animation-delay:3.4s}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800;margin-bottom:1rem}
+.hero h1 em{font-style:normal;color:var(--work)}
+.hero p{color:var(--mute);font-size:1.15rem;max-width:56ch;margin-bottom:2rem}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.open{display:inline-flex;align-items:center;gap:.5rem;font-size:.95rem;color:var(--mute);margin-left:.5rem}
+.open i{width:.6rem;height:.6rem;border-radius:50%;background:var(--personal);box-shadow:0 0 0 4px rgba(61,214,181,.2)}
+
+/* journey */
+.legend{display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:3rem;font-size:.95rem;color:var(--mute)}
+.legend span::before{content:"";display:inline-block;width:.7rem;height:.7rem;border-radius:50%;margin-right:.5rem;background:var(--c)}
+.jr{position:relative;max-width:920px;margin:0 auto}
+.jr::before,.fill{content:"";position:absolute;left:50%;top:0;width:3px;margin-left:-1.5px;border-radius:2px}
+.jr::before{bottom:0;background:var(--line)}
+.fill{height:0;background:linear-gradient(var(--learn),var(--work));box-shadow:0 0 14px var(--work)}
+.jr ol{list-style:none}
+.it{position:relative;width:50%;padding:0 2.75rem 3rem 0;opacity:.25;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.it:nth-child(even){margin-left:50%;padding:0 0 3rem 2.75rem}
+.it.on{opacity:1;transform:none}
+.it::after{content:"";position:absolute;top:.35rem;right:-.6rem;width:1.2rem;height:1.2rem;border-radius:50%;background:var(--bg);border:3px solid var(--c);transition:background .4s,box-shadow .4s}
+.it:nth-child(even)::after{right:auto;left:-.6rem}
+.it.on::after{background:var(--c);box-shadow:0 0 0 6px color-mix(in srgb,var(--c) 25%,transparent)}
+.it[data-t=work]{--c:var(--work)}.it[data-t=learn]{--c:var(--learn)}.it[data-t=personal]{--c:var(--personal)}
+.it .when{font:500 .85rem var(--mono);color:var(--c);margin-bottom:.25rem}
+.it h3{font-size:1.3rem;margin-bottom:.35rem}
+.it p{color:var(--mute);font-size:.97rem}
+.it:nth-child(odd){text-align:right}
+
+/* projects */
+.tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2rem}
+.tab{font:600 .95rem var(--body);padding:.5rem 1.1rem;border-radius:999px;border:2px solid var(--line);background:none;color:var(--mute);cursor:pointer}
+.tab[aria-pressed=true]{background:var(--text);color:var(--bg);border-color:var(--text)}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.pc{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--c);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;animation:line .45s forwards}
+.pc[data-t=work]{--c:var(--work)}.pc[data-t=personal]{--c:var(--personal)}
+.pc.hide{display:none}
+.pc .kind{font-size:.85rem;color:var(--c);font-weight:600;margin-bottom:.35rem}
+.pc h3{font-size:1.2rem;margin-bottom:.5rem}
+.pc p{color:var(--mute);font-size:.95rem;flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+.chips span{font-size:.8rem;border:1px solid var(--line);border-radius:999px;padding:.15rem .65rem;color:var(--text)}
+.pc a.go{margin-top:1rem;font-weight:600;color:var(--c);text-decoration:none}
+.pc a.go:hover{text-decoration:underline}
+
+/* skills & learning */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.sk div{padding:1rem 0;border-top:1px solid var(--line)}
+.sk h3{font-size:1.05rem;margin-bottom:.2rem}
+.sk p{color:var(--mute);font-size:.97rem}
+.cert{padding:1rem 0;border-top:1px solid var(--line)}
+.cert b{font:700 1.05rem var(--display);display:block}
+.cert span{color:var(--mute);font-size:.95rem}
+h3.col{font-size:1.5rem;margin-bottom:1rem}
+
+/* contact */
+.contact{background:var(--surface);border-top:1px solid var(--line)}
+.c-links{display:flex;flex-wrap:wrap;gap:.75rem}
+footer{padding:1.5rem 0;font-size:.9rem;color:var(--mute);text-align:center}
+
+@media (max-width:900px){.pgrid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr;gap:2.5rem}}
+@media (max-width:720px){
+  section{padding:3.5rem 0}
+  .menu{display:block}
+  .links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:.5rem 1.25rem 1rem}
+  .links.open{display:flex}.links a{display:block;padding:.7rem 0}
+  .jr::before,.fill{left:11px;margin-left:0}
+  .it,.it:nth-child(even){width:100%;margin-left:0;padding:0 0 2.5rem 2.75rem;text-align:left}
+  .it::after,.it:nth-child(even)::after{left:.1rem;right:auto}
+  .pgrid{grid-template-columns:1fr}
+  .btn{width:100%;text-align:center}.open{margin:.5rem 0 0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .term div.l,.reveal,.pc{animation:none;opacity:1;transform:none}
+  .term .cur{animation:none}
+  .it{opacity:1;transform:none;transition:none}
+  .fill{display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap" aria-label="Main">
+    <a href="#top" class="logo">Lokendra<span>.</span>dev</a>
+    <button class="menu" id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+    <ul class="links" id="links">
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="term" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <div class="l l1">$ dotnet build lokendra</div>
+      <div class="l l2">Restoring C#, .NET Core, Angular, SQL Server ...</div>
+      <div class="l l3">Compiling 4.5+ years of experience ...</div>
+      <div class="l l4 ok">Build succeeded. 0 errors. <span class="cur"></span></div>
+    </div>
+    <h1 class="reveal">Hi, I'm Lokendra.<br>I build things with <em>.NET</em>.</h1>
+    <p class="reveal b">Full-stack developer from Jaipur with 4.5+ years of experience in e-commerce, government, fintech and healthcare. Scroll down to see how I got here, what I learned on the way, and what I've built.</p>
+    <div class="cta reveal b">
+      <a class="btn btn-fill" href="#journey">See my journey</a>
+      <a class="btn btn-line" href="Lokendra_Sharma_DotNet_FullStack_Resume.pdf" download>Download resume</a>
+      <span class="open"><i></i>Open to full-time roles</span>
+    </div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="wrap">
+    <h2>My journey</h2>
+    <p class="lead">From electronics diploma to full-stack developer. The line fills as you scroll.</p>
+    <div class="legend"><span style="--c:var(--learn)">Learning</span><span style="--c:var(--personal)">Personal projects</span><span style="--c:var(--work)">Work</span></div>
+    <div class="jr" id="jr">
+      <div class="fill" id="fill"></div>
+      <ol>
+        <li class="it" data-t="learn"><div class="when">2017 – 2020</div><h3>Diploma in Electronics and Communication</h3><p>Govt. Ramchandra Khaitan Polytechnic College, Jaipur. Where I first got into programming.</p></li>
+        <li class="it" data-t="learn"><div class="when">Apr – May 2020</div><h3>Cloud and machine learning courses</h3><p>Completed Getting Started with AWS Machine Learning and Industrial IoT on Google Cloud on Coursera.</p></li>
+        <li class="it" data-t="learn"><div class="when">Jan – May 2021</div><h3>C# training</h3><p>Proficiency in C# certification from Swati Computers. This is where .NET started.</p></li>
+        <li class="it" data-t="learn"><div class="when">2021</div><h3>Started B.Tech in Computer Science</h3><p>Arya Institute of Engineering and Technology, Jaipur.</p></li>
+        <li class="it" data-t="personal"><div class="when">Side projects</div><h3>Learning by building</h3><p>A custom CMS, a React and .NET API app, a free country/state/district API, a Unity 3D game and a learning site. See them in Projects.</p></li>
+        <li class="it" data-t="work"><div class="when">Mar 2022 – May 2023</div><h3>.NET Developer at Ezytm Technology</h3><p>My first job. Built web apps and REST APIs for fintech and e-commerce, and integrated Paytm, PayU and Razorpay payments.</p></li>
+        <li class="it" data-t="work"><div class="when">Jul 2023 – Jan 2024</div><h3>Software Developer at Ambient Diagnostic and Research Centre</h3><p>Built LIMS Soft, laboratory software that talks to lab instruments and generates reports automatically.</p></li>
+        <li class="it" data-t="work"><div class="when">Jan 2024 – Sep 2025</div><h3>Software Developer at BR Softech</h3><p>Built government and enterprise apps with ASP.NET Core and Angular, including IIT Roorkee Faculty Selection and AIIMS Nagpur.</p></li>
+        <li class="it" data-t="learn"><div class="when">2024</div><h3>Graduated B.Tech</h3><p>Finished with a CGPA of 7.11/10, while working full time.</p></li>
+        <li class="it" data-t="work"><div class="when">Sep 2025 – OCT 2026</div><h3>Software Developer at SmartSign Design</h3><p>Working on e-commerce performance, Implement Redis caching, query tuning, Core Web Vitals, CI/CD on Azure DevOps and Sentry monitoring.</p></li>
+        <li class="it" data-t="personal"><div class="when">Next</div><h3>Looking for my next team</h3><p>I'm open to full-time .NET and full-stack roles. <a href="#contact">Let's talk.</a></p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="lead">What I built at work, and what I built for myself.</p>
+    <div class="tabs" role="group" aria-label="Filter projects">
+      <button class="tab" data-f="all" aria-pressed="true">All</button>
+      <button class="tab" data-f="work" aria-pressed="false">Professional</button>
+      <button class="tab" data-f="personal" aria-pressed="false">Personal</button>
+    </div>
+    <div class="pgrid" id="pgrid">
+      <article class="pc" data-t="work"><div class="kind">Professional · SmartSign Design</div><h3>SmartSign, MySafetySign, MyParkingSign</h3><p>E-commerce sites. Fixed product listing page issues, tuned queries, added Redis caching and improved Core Web Vitals, contributing to a reported 60% performance improvement.</p><div class="chips"><span>.NET</span><span>Azure SQL</span><span>Redis</span><span>Azure DevOps</span></div></article>
+      <article class="pc" data-t="work"><div class="kind">Professional · BR Softech</div><h3>IIT Roorkee Faculty Selection</h3><p>Application submission and approval workflows for faculty hiring, with secure document uploads to AWS S3.</p><div class="chips"><span>ASP.NET Core</span><span>Angular</span><span>AWS S3</span></div></article>
+      <article class="pc" data-t="work"><div class="kind">Professional · BR Softech</div><h3>AIIMS Nagpur</h3><p>Departmental query assignment, tracking and resolution workflows.</p><div class="chips"><span>ASP.NET Core</span><span>AngularJS</span><span>IIS</span></div></article>
+      <article class="pc" data-t="work"><div class="kind">Professional · BR Softech</div><h3>ICAR, Query Management, Game Master Admin, Group Chat</h3><p>More government and enterprise apps, with microservice-based backends and REST APIs.</p><div class="chips"><span>.NET Core</span><span>Angular</span><span>Microservices</span></div></article>
+      <article class="pc" data-t="work"><div class="kind">Professional · Ezytm Technology</div><h3>Great India Pay, HRM, APIBox, Website CMS</h3><p>Fintech, mobile recharge and e-commerce products, with Paytm, PayU and Razorpay payment workflows.</p><div class="chips"><span>.NET</span><span>EF Core</span><span>REST APIs</span></div></article>
+      <article class="pc" data-t="work"><div class="kind">Professional · Ambient Diagnostic</div><h3>LIMS Soft</h3><p>Laboratory management software with instrument communication, diagnostic data capture and automatic reports.</p><div class="chips"><span>.NET Core</span><span>Entity Framework</span><span>SQL Server</span></div></article>
+      <article class="pc" data-t="personal"><div class="kind">Personal</div><h3>Content Management System</h3><p>A custom CMS built for a local business so they can update their own website. Has a custom editor and a responsive design.</p><div class="chips"><span>.NET</span><span>SQL Server</span></div><a class="go" href="https://dudetest.netlify.app/">View project</a></article>
+      <article class="pc" data-t="personal"><div class="kind">Personal</div><h3>SmokeNVibes.in</h3><p>A hookah platform with a React frontend and a .NET Framework API. Images are stored on Cloudinary.</p><div class="chips"><span>React</span><span>.NET API</span><span>Cloudinary</span></div><a class="go" href="https://smokenvibes.in">View project</a></article>
+      <article class="pc" data-t="personal"><div class="kind">Personal</div><h3>Voltrex.tech</h3><p>A free API for country, state and district data.</p><div class="chips"><span>REST API</span><span>.NET</span></div><a class="go" href="https://voltrex.tech/">View project</a></article>
+      <article class="pc" data-t="personal"><div class="kind">Personal</div><h3>CubeBox</h3><p>My first Unity 3D game, built with basic C# logic.</p><div class="chips"><span>Unity</span><span>C#</span></div><a class="go" href="CubeBox%20v1.0.exe">Download game</a></article>
+      <article class="pc" data-t="personal"><div class="kind">Personal</div><h3>Learning site</h3><p>A basic learning website built with plain HTML, CSS and JavaScript.</p><div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="go" href="https://dudeboy.study">View project</a></article>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap two">
+    <div class="sk">
+      <h3 class="col">Skills</h3>
+      <div><h3>Backend</h3><p>C#, .NET Framework, .NET Core, ASP.NET MVC, REST APIs, Entity Framework Core, SignalR, Redis</p></div>
+      <div><h3>Frontend</h3><p>Angular, AngularJS, ReactJS, TypeScript, JavaScript, HTML5, CSS3</p></div>
+      <div><h3>Database</h3><p>SQL Server, MySQL, MongoDB, schema design</p></div>
+      <div><h3>Cloud and tools</h3><p>Azure App Service, Azure Functions, AWS S3, IIS, Azure DevOps, Git, Sentry</p></div>
+    </div>
+    <div>
+      <h3 class="col">What I've learned</h3>
+      <div class="cert"><b>Proficiency in C#</b><span>Swati Computers · Jan – May 2021</span></div>
+      <div class="cert"><b>Industrial IoT on Google Cloud</b><span>Coursera · May 2020</span></div>
+      <div class="cert"><b>Getting Started with AWS Machine Learning</b><span>Coursera · Apr 2020</span></div>
+      <div class="cert"><b>B.Tech, Computer Science</b><span>Arya Institute of Engineering and Technology · 2021 – 2024</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's work together</h2>
+    <p class="lead">I'm looking for a full-time .NET or full-stack role. Send me a message or take my resume.</p>
+    <div class="c-links">
+      <a class="btn btn-fill" href="mailto:Lokendrash7@gmail.com">Lokendrash7@gmail.com</a>
+      <a class="btn btn-line" href="/app/Lokendra_Sharma_DotNet_FullStack_Resume.pdf" download>Download resume</a>
+      <a class="btn btn-line" href="https://www.linkedin.com/in/lokendrash7">LinkedIn</a>
+      <a class="btn btn-line" href="https://github.com/volvein">GitHub</a>
+      <a class="btn btn-line" href="tel:+919119122262">+91 91191 22262</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="yr"></span> Lokendra Sharma · Jaipur, India</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+$('yr').textContent = new Date().getFullYear();
+
+// mobile menu
+const menu = $('menu'), links = $('links');
+menu.onclick = () => menu.setAttribute('aria-expanded', links.classList.toggle('open'));
+links.onclick = e => { if (e.target.tagName === 'A') { links.classList.remove('open'); menu.setAttribute('aria-expanded', false); } };
+
+// journey: line fills with scroll, milestones light up when reached
+const jr = $('jr'), fill = $('fill'), items = [...jr.querySelectorAll('.it')];
+let ticking = false;
+function update() {
+  const r = jr.getBoundingClientRect();
+  const y = Math.min(Math.max(innerHeight * 0.6 - r.top, 0), r.height);
+  fill.style.height = y + 'px';
+  items.forEach(i => i.classList.toggle('on', i.offsetTop + 8 <= y));
+  ticking = false;
+}
+addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+addEventListener('resize', update);
+update();
+
+// project filter
+const cards = [...document.querySelectorAll('.pc')], tabs = [...document.querySelectorAll('.tab')];
+tabs.forEach(t => t.onclick = () => {
+  tabs.forEach(x => x.setAttribute('aria-pressed', x === t));
+  cards.forEach(c => {
+    c.classList.toggle('hide', t.dataset.f !== 'all' && c.dataset.t !== t.dataset.f);
+    c.style.animation = 'none'; c.offsetWidth; c.style.animation = '';
+  });
+});
+</script>
+</body>
+</html>
